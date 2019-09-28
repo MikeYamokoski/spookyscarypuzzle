@@ -62,8 +62,8 @@ if (place_meeting(x, y + vsp, obj_box)){
 y += vsp;
 
 //WaterGrabbing
-if ((place_meeting(x, y + vsp, obj_cauldron)) && (keyboard_check(ord("R")))){
-	
+if ((place_meeting(x, y + vsp, obj_cauldron)) && (keyboard_check_pressed(ord("C")))){
+	instance_create_layer(x + 32*sign(image_xscale), y - 32, "layer_player", obj_water);
 }
 // Animation
 
