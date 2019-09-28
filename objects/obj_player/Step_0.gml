@@ -38,7 +38,7 @@ if ((place_meeting(x, y + 1, obj_wall))) || (place_meeting(x, y + 1, obj_box)){
 vsp += grv;
 
 if ((jump > 0) && (key_jump)) {
-	vsp = -7.5;
+	vsp = -12;
 	jump -= 1;
 }
 //Vertical Collision
