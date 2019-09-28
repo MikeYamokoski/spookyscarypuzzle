@@ -1,13 +1,35 @@
+if (is_facing_right) {
+	hsp = walksp
+} else {
+	hsp = -1 * walksp
+}
 
 //Horizontal Collision
 if (place_meeting(x + hsp, y, obj_wall)){
-	
 	while (!place_meeting(x + sign(hsp), y, obj_wall)){
 		x += sign(hsp);
-		
 	}
-	hsp = 0;
+	if (is_facing_right) {
+		hsp = -1 * walksp
+	} else {
+		hsp = walksp
+	}
+	is_facing_right = !is_facing_right
 }
+
+//Horizontal Collision with box
+if (place_meeting(x + hsp, y, obj_box)){
+	while (!place_meeting(x + sign(hsp), y, obj_box)){
+		x += sign(hsp);
+	}
+	if (is_facing_right) {
+		hsp = -1 * walksp
+	} else {
+		hsp = walksp
+	}
+	is_facing_right = !is_facing_right
+}
+
 x += hsp;
 
 if (place_meeting(x, y + 1, obj_wall)){
