@@ -1,6 +1,6 @@
 
 {
-    "name": "rm_level2",
+    "name": "rm_testMechanics",
     "id": "2d5d2a47-c6ab-4c10-8f0f-1be41434e5d8",
     "creationCodeFile": "",
     "inheritCode": false,

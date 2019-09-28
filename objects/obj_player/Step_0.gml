@@ -38,7 +38,7 @@ if ((place_meeting(x, y + 1, obj_wall))) || (place_meeting(x, y + 1, obj_box)){
 vsp += grv;
 
 if ((jump > 0) && (key_jump)) {
-	vsp = -12;
+	vsp = -8.8;
 	jump -= 1;
 }
 //Vertical Collision
@@ -61,6 +61,10 @@ if (place_meeting(x, y + vsp, obj_box)){
 }
 y += vsp;
 
+//WaterGrabbing
+if ((place_meeting(x, y + vsp, obj_cauldron)) && (keyboard_check(ord("R")))){
+	
+}
 // Animation
 
 if ((!place_meeting(x, y + 1, obj_wall)) && (!place_meeting(x, y + 1, obj_box))){
