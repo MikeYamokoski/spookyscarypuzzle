@@ -62,7 +62,7 @@ y += vsp;
 
 // Animation
 
-if ((!place_meeting(x, y + 1, obj_wall)) || (!place_meeting(x, y + 1, obj_box))){
+if ((!place_meeting(x, y + 1, obj_wall)) && (!place_meeting(x, y + 1, obj_box))){
 	
 	sprite_index = spr_airbourne;
 	image_speed = 0;
